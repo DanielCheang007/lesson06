@@ -1,0 +1,38 @@
+.tetris {
+  width: 200px;
+  height: 400px;
+  padding: 1px;
+  outline: 1px solid #222;
+
+  display: flex;
+  flex-flow: wrap;
+}
+
+.tetris__cell {
+  position: relative;
+  box-sizing: border-box;
+
+  width: 18px;
+  height: 18px;
+  border: 2px solid #eee;
+  margin: 1px;
+}
+
+.tetris__cell:before {
+  content: " ";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
+
+  background: #eee;
+}
+
+.tetris__cell--active {
+  border-color: #222;
+}
+
+.tetris__cell--active:before {
+  background: #222;
+}
